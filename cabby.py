@@ -1,4 +1,5 @@
 import pygame
+import obstacle
 pygame.init()
 clock=pygame.time.Clock()
 
@@ -25,6 +26,8 @@ while not gameOver:
     gameDisplay.fill(green)
     x=x+x_change
     gameDisplay.blit(carImg,(x,y))
+    obstacle.obstacle(gameDisplay)
+    # pygame.draw.rect(gameDisplay,(0,0,0),[10,10,100,100])
     pygame.display.flip() #updates the screen
     clock.tick(60)
 pygame.quit()
